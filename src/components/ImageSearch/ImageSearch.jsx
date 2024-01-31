@@ -25,7 +25,7 @@ const ImageSearch = () => {
       try {
         setLoading(true);
         const { data } = await searchImages(search, page);
-        setHits(prevHits => data.hits?.length ? [...hits, ...data.hits] : prevHits)
+        setHits(prevHits => data.hits?.length ? [...prevHits, ...data.hits] : prevHits);
         setTotalHits(prevTotalHits => data.totalHits ? data.totalHits : prevTotalHits)
       
       } 
